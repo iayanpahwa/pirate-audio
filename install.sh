@@ -1,5 +1,10 @@
 #!/bin/bash
-set -x
+
+sudo apt-get update
+sudo apt-get install -y gstreamer1.0-tools \
+                        gstreamer1.0-plugins-base \
+                        gstreamer1.0-plugins-good \
+                        gstreamer1.0-pulseaudio
 
 function add_to_config_text {
     CONFIG_LINE="$1"
@@ -16,3 +21,4 @@ raspi-config nonint do_spi 0
 # Add necessary lines to config.txt (if they don't exist)
 add_to_config_text "gpio=25=op,dh" /boot/config.txt
 add_to_config_text "dtoverlay=hifiberry-dac" /boot/config.txt
+
