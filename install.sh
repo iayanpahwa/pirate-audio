@@ -1,7 +1,7 @@
 #!/bin/bash
 
 sudo apt-get update
-sudo apt-get install -y pulseaudio
+sudo apt-get install -y pulseaudio \
                         gstreamer1.0-tools \
                         gstreamer1.0-plugins-base \
                         gstreamer1.0-plugins-good \
