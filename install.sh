@@ -18,6 +18,7 @@ function add_to_config_text {
 
 # Enable SPI
 raspi-config nonint do_spi 0
+pulseaudio -D 
 
 # Add necessary lines to config.txt (if they don't exist)
 add_to_config_text "gpio=25=op,dh" /boot/config.txt
